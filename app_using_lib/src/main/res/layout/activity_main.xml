@@ -51,6 +51,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
+        android:hint="请输入密码"
+        android:paddingStart="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="15dp"
+        app:input_type="password" />
+
+    <com.cxyzy.cet.ClearEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
         android:hint="请输入普通文字"
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
@@ -72,7 +85,5 @@
         android:paddingRight="12dp"
         android:paddingBottom="15dp"
         app:input_type="number" />
-
-
 
 </LinearLayout>
