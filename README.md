@@ -13,7 +13,7 @@
         android:hint="请输入手机号"
         app:input_type="phone" />
 ```
-input_type可选值和含义：
+input_type可选值和含义：  
 common：普通文字信息(不做任何限制)  
 phone：手机号(11位，分隔显示样例：155 8080 7070)  
 bank_card_no：银行卡(每四位增加一个分隔符，如：6200 1111 0000)  
