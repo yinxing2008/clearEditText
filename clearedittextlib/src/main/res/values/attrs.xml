@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ClearEditText">
+        <attr name="input_type" format="enum">
+            <enum name="common" value="0" />
+            <enum name="phone" value="1" />
+            <enum name="bank_card_no" value="2" />
+            <enum name="id_card_no" value="3" />
+            <enum name="number" value="4" />
+        </attr>
+    </declare-styleable>
+
+</resources>
