@@ -26,6 +26,6 @@ public class PhoneNumberFormatter extends BaseInputTextFormatter {
 
     @Override
     public String getAllowableCharacters() {
-        return ".0123456789 ";
+        return "0123456789 ";
     }
 }
