@@ -85,9 +85,4 @@ public abstract class BaseInputTextFormatter implements InputTextFormatter {
     public int getTextInputType() {
         return InputType.TYPE_CLASS_TEXT;
     }
-
-    @Override
-    public String getAllowableCharacters() {
-        return null;
-    }
 }

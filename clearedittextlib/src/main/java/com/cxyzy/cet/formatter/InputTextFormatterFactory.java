@@ -14,10 +14,12 @@ public class InputTextFormatterFactory {
             return new IdCardFormatter();
         } else if (inputType == Constants.TYPE_BANK_CARD) {
             return new BankCardFormatter();
+        } else if (inputType == Constants.TYPE_PASSWORD) {
+            return new PasswordFormatter();
         } else if (inputType == Constants.TYPE_NUMBER) {
             return new NumberFormatter();
-        } else {
-            return new EmptyFormatter();
+        }else {
+            return new CommonFormatter();
         }
     }
 

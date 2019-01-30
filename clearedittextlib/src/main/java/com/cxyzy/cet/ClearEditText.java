@@ -77,6 +77,7 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
         if (!TextUtils.isEmpty(allowableCharacters)) {
             setKeyListener(DigitsKeyListener.getInstance(allowableCharacters));
         }
+
     }
 
     /**
