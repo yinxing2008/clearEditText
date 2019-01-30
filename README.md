@@ -8,10 +8,16 @@
 2. xml中使用样例
 ```
 <com.cxyzy.cet.ClearEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="请输入手机号"
-        app:input_type="phone" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入手机号"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
+            app:input_type="phone" />
 ```
 input_type可选值和含义：  
 common：普通文字信息(不做任何限制)  
