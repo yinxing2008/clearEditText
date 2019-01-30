@@ -1,6 +1,6 @@
 # clearEditText
 带清除按钮输入框，支持输入普通文字、数字、密码；支持分段显示身份证、手机号、银行卡。
-
+![](https://github.com/cxyzy1/clearEditText/raw/master/screenshot/Screenshot.png)
 # 调用方法：
 1. 添加依赖包
 - 项目根目录下build.gradle的allprojects->repositories下增加`maven { url 'https://jitpack.io' }`
