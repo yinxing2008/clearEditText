@@ -16,8 +16,8 @@
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
-        android:paddingEnd="12dp"
-        android:paddingRight="12dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
         android:paddingBottom="15dp"
         app:input_type="phone" />
 
@@ -29,8 +29,8 @@
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
-        android:paddingEnd="12dp"
-        android:paddingRight="12dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
         android:paddingBottom="15dp"
         app:input_type="id_card_no" />
 
@@ -42,8 +42,8 @@
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
-        android:paddingEnd="12dp"
-        android:paddingRight="12dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
         android:paddingBottom="15dp"
         app:input_type="bank_card_no" />
 
@@ -55,8 +55,8 @@
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
-        android:paddingEnd="12dp"
-        android:paddingRight="12dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
         android:paddingBottom="15dp"
         app:input_type="password" />
 
@@ -68,8 +68,8 @@
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
-        android:paddingEnd="12dp"
-        android:paddingRight="12dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
         android:paddingBottom="15dp"
         app:input_type="common" />
 
@@ -81,8 +81,8 @@
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
-        android:paddingEnd="12dp"
-        android:paddingRight="12dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
         android:paddingBottom="15dp"
         app:input_type="number" />
 
