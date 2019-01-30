@@ -1,1 +1,1 @@
-include ':app', ':clearedittextlib'
+include ':app', ':clearedittextlib', ':app_using_lib'
