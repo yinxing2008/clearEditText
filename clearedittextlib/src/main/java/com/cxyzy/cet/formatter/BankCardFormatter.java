@@ -5,13 +5,11 @@ package com.cxyzy.cet.formatter;
  */
 
 public class BankCardFormatter extends BaseInputTextFormatter {
+    BankCardFormatter() {
+        textFormat = "####.####.####.####.####.####";
+    }
     @Override
     public String getAllowableCharacters() {
         return "0123456789 ";
-    }
-
-    @Override
-    public String getTextFormat() {
-        return "####.####.####.####.####.####";
     }
 }

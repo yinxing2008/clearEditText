@@ -25,8 +25,8 @@ public class InputTextFormatterFactory {
     public static String getAllowableCharacters(int inputType) {
         return getFormatter(inputType).getAllowableCharacters();
     }
-    public static String getTextFormat(int inputType) {
-        return getFormatter(inputType).getTextFormat();
+    public static void setTextFormat(int inputType,String textFormat) {
+        getFormatter(inputType).setTextFormat(textFormat);
     }
 
 }

@@ -8,5 +8,5 @@ public interface InputTextFormatter {
 
     String getAllowableCharacters();
 
-    String getTextFormat();
+    void setTextFormat(String textFormat);
 }

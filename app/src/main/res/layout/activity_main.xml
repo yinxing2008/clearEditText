@@ -19,6 +19,7 @@
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
+        android:maxLength="13"
         app:showType="phone" />
 
     <com.cxyzy.cet.ClearEditText

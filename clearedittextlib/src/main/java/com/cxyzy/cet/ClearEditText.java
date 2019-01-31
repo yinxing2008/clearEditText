@@ -70,6 +70,7 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
         //设置输入框里面内容发生改变的监听
         addTextChangedListener(this);
 
+
         if(TextUtils.isEmpty(allowableCharacters))
         {
             allowableCharacters = InputTextFormatterFactory.getAllowableCharacters(showType);
@@ -77,6 +78,13 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
         if (!TextUtils.isEmpty(allowableCharacters)) {
             setKeyListener(DigitsKeyListener.getInstance(allowableCharacters));
         }
+
+        if(!TextUtils.isEmpty(textFormat))
+        {
+            InputTextFormatterFactory.setTextFormat(showType,textFormat);
+        }
+
+
     }
 
     /**

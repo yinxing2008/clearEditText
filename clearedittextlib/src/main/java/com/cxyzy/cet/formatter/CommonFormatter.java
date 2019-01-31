@@ -10,9 +10,4 @@ public class CommonFormatter extends BaseInputTextFormatter {
     public String getAllowableCharacters() {
         return null;
     }
-
-    @Override
-    public String getTextFormat() {
-        return null;
-    }
 }

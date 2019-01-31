@@ -5,13 +5,14 @@ package com.cxyzy.cet.formatter;
  */
 
 public class PhoneNumberFormatter extends BaseInputTextFormatter {
+    PhoneNumberFormatter()
+    {
+        textFormat ="###.####.####";
+    }
+
     @Override
     public String getAllowableCharacters() {
         return "0123456789 ";
     }
 
-    @Override
-    public String getTextFormat() {
-        return "###.####.####";
-    }
 }

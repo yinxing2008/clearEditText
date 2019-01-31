@@ -13,6 +13,7 @@ public abstract class BaseInputTextFormatter implements InputTextFormatter {
     protected final int DEFAULT_MAX_LEN = 50;
     protected int[] splitLenArr = new int[]{3, 4, 4};
     protected int[] splitPosArr;
+    protected String textFormat;
 
     public BaseInputTextFormatter() {
         splitPosArr = getSplitPosArr();
@@ -84,17 +85,22 @@ public abstract class BaseInputTextFormatter implements InputTextFormatter {
     }
 
     protected boolean isSpace(int length) {
-        String format = getTextFormat();
         boolean result = false;
-        if (!TextUtils.isEmpty(format)
-                && length < format.length() && length > 0
-                && containsSplit(format, length)) {
+        if (!TextUtils.isEmpty(textFormat)
+                && length < textFormat.length() && length > 0
+                && containsSplit(length)) {
             result = true;
         }
         return result;
     }
 
-    private boolean containsSplit(@NonNull String format, int length) {
-        return format.charAt(length - 1) == Constants.SPLIT;
+    private boolean containsSplit(int length) {
+        return textFormat.charAt(length - 1) == Constants.SPLIT;
+    }
+
+    @Override
+    public void setTextFormat(String textFormat)
+    {
+        this.textFormat = textFormat;
     }
 }
