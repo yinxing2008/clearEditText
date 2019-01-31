@@ -99,7 +99,6 @@
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
-        app:textFormat="### ### ##"
-        />
+        app:textFormat="### ### ##" />
 
 </LinearLayout>
