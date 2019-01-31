@@ -1,19 +1,10 @@
 package com.cxyzy.cet.formatter;
 
-import android.text.InputFilter;
-
 /**
  * 银行卡号格式化器
  */
 
 public class BankCardFormatter extends BaseInputTextFormatter {
-
-    private static BankCardFormatter INSTANCE = new BankCardFormatter();
-
-    public static BankCardFormatter getInstance() {
-        return INSTANCE;
-    }
-
     BankCardFormatter() {
         textFormat = "####.####.####.####.####.####";
     }

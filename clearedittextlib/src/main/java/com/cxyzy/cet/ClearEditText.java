@@ -59,6 +59,8 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
         allowableCharacters = typedArray.getString(R.styleable.ClearEditText_allowableCharacters);
         textFormat = typedArray.getString(R.styleable.ClearEditText_textFormat);
 
+        inputTextFormatter = InputTextFormatterFactory.getFormatter(showType);
+
         //获取EditText的DrawableRight,假如没有设置我们就使用默认的图片
         mClearDrawable = getCompoundDrawables()[2];
         if (mClearDrawable == null) {
@@ -73,7 +75,8 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
         //设置输入框里面内容发生改变的监听
         addTextChangedListener(this);
 
-        inputTextFormatter = InputTextFormatterFactory.getFormatter(showType);
+
+
         if (TextUtils.isEmpty(allowableCharacters)) {
             allowableCharacters = inputTextFormatter.getAllowableCharacters();
         }

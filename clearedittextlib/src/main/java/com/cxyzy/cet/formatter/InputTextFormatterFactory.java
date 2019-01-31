@@ -1,9 +1,5 @@
 package com.cxyzy.cet.formatter;
 
-import android.text.InputFilter;
-import android.text.TextWatcher;
-import android.widget.EditText;
-
 import com.cxyzy.cet.Constants;
 
 public class InputTextFormatterFactory {
