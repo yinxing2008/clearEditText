@@ -82,6 +82,7 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
         if (!TextUtils.isEmpty(textFormat)) {
             InputTextFormatterFactory.setTextFormat(showType, textFormat);
         }
+
         if (getFilters() == null || getFilters().length == 0) {
             InputFilter[] filters = InputTextFormatterFactory.getInputFilter(showType);
             if (filters != null && filters.length != 0) {

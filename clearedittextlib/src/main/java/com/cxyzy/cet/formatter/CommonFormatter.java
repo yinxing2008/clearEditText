@@ -1,7 +1,5 @@
 package com.cxyzy.cet.formatter;
 
-import android.text.InputFilter;
-
 public class CommonFormatter extends BaseInputTextFormatter {
     private static CommonFormatter INSTANCE = new CommonFormatter();
 

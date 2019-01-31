@@ -21,9 +21,5 @@ public class IdCardFormatter extends BaseInputTextFormatter {
     public String getAllowableCharacters() {
         return "0123456789 xX";
     }
-    @Override
-    public InputFilter[] getInputFilter() {
-        return new InputFilter[]{new InputFilter.LengthFilter(21)};
-    }
 
 }

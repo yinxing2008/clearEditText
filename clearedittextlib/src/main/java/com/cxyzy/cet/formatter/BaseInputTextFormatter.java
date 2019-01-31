@@ -100,12 +100,17 @@ public abstract class BaseInputTextFormatter implements InputTextFormatter {
     }
 
     @Override
-    public void setTextFormat(String textFormat)
-    {
+    public void setTextFormat(String textFormat) {
         this.textFormat = textFormat;
     }
+
     @Override
     public InputFilter[] getInputFilter() {
-        return null;
+        if (TextUtils.isEmpty(textFormat)) {
+            return null;
+        } else {
+            return new InputFilter[]{new InputFilter.LengthFilter(textFormat.length())};
+        }
+
     }
 }

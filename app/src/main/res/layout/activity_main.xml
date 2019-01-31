@@ -19,8 +19,7 @@
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
-        app:textFormat="##.##"
-        app:showType="phone" />
+        app:textFormat="##.##.##.##" />
 
     <com.cxyzy.cet.ClearEditText
         android:layout_width="match_parent"

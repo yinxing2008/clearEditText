@@ -24,8 +24,5 @@ public class PhoneNumberFormatter extends BaseInputTextFormatter {
         return "0123456789 ";
     }
 
-    @Override
-    public InputFilter[] getInputFilter() {
-        return new InputFilter[]{new InputFilter.LengthFilter(13)};
-    }
+
 }

@@ -22,9 +22,4 @@ public class BankCardFormatter extends BaseInputTextFormatter {
     public String getAllowableCharacters() {
         return "0123456789 ";
     }
-
-    @Override
-    public InputFilter[] getInputFilter() {
-        return new InputFilter[]{new InputFilter.LengthFilter(29)};
-    }
 }
