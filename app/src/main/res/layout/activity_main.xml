@@ -19,7 +19,7 @@
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
-        android:maxLength="13"
+        app:textFormat="##.##"
         app:showType="phone" />
 
     <com.cxyzy.cet.ClearEditText
@@ -53,13 +53,13 @@
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:hint="请输入密码"
+        android:inputType="textPassword"
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
-        android:paddingBottom="15dp"
-        android:inputType="textPassword"/>
+        android:paddingBottom="15dp" />
 
     <com.cxyzy.cet.ClearEditText
         android:layout_width="match_parent"
@@ -79,12 +79,12 @@
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:hint="请输入数字(含小数点)"
+        android:inputType="number"
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
-        android:paddingBottom="15dp"
-        android:inputType="number" />
+        android:paddingBottom="15dp" />
 
 </LinearLayout>

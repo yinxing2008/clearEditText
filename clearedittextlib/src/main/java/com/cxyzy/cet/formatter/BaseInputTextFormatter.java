@@ -2,6 +2,7 @@ package com.cxyzy.cet.formatter;
 
 import android.support.annotation.NonNull;
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -102,5 +103,9 @@ public abstract class BaseInputTextFormatter implements InputTextFormatter {
     public void setTextFormat(String textFormat)
     {
         this.textFormat = textFormat;
+    }
+    @Override
+    public InputFilter[] getInputFilter() {
+        return null;
     }
 }

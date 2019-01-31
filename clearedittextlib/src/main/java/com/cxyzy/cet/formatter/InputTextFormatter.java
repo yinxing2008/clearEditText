@@ -1,5 +1,6 @@
 package com.cxyzy.cet.formatter;
 
+import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.widget.EditText;
 
@@ -9,4 +10,6 @@ public interface InputTextFormatter {
     String getAllowableCharacters();
 
     void setTextFormat(String textFormat);
+
+    InputFilter[] getInputFilter();
 }

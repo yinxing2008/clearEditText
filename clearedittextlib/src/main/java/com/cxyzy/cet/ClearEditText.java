@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.method.DigitsKeyListener;
@@ -71,19 +72,22 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
         addTextChangedListener(this);
 
 
-        if(TextUtils.isEmpty(allowableCharacters))
-        {
+        if (TextUtils.isEmpty(allowableCharacters)) {
             allowableCharacters = InputTextFormatterFactory.getAllowableCharacters(showType);
         }
         if (!TextUtils.isEmpty(allowableCharacters)) {
             setKeyListener(DigitsKeyListener.getInstance(allowableCharacters));
         }
 
-        if(!TextUtils.isEmpty(textFormat))
-        {
-            InputTextFormatterFactory.setTextFormat(showType,textFormat);
+        if (!TextUtils.isEmpty(textFormat)) {
+            InputTextFormatterFactory.setTextFormat(showType, textFormat);
         }
-
+        if (getFilters() == null || getFilters().length == 0) {
+            InputFilter[] filters = InputTextFormatterFactory.getInputFilter(showType);
+            if (filters != null && filters.length != 0) {
+                setFilters(filters);
+            }
+        }
 
     }
 
