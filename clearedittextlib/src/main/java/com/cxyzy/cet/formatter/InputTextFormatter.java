@@ -7,9 +7,5 @@ import android.widget.EditText;
 public interface InputTextFormatter {
     void format(EditText editText, TextWatcher watcher, int start, int before, int count);
 
-    InputFilter[] getInputFilter();
-
-    int getTextInputType();
-
     String getAllowableCharacters();
 }

@@ -14,16 +14,6 @@ public class BankCardFormatter extends BaseInputTextFormatter {
     }
 
     @Override
-    public InputFilter[] getInputFilter() {
-        return new InputFilter[]{new InputFilter.LengthFilter(29)};
-    }
-
-    @Override
-    public int getTextInputType() {
-        return InputType.TYPE_CLASS_NUMBER;
-    }
-
-    @Override
     public String getAllowableCharacters() {
         return "0123456789 ";
     }

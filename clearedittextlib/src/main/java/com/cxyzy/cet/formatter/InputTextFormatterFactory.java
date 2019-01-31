@@ -27,14 +27,6 @@ public class InputTextFormatterFactory {
         getFormatter(inputType).format(editText, watcher, start, before, count);
     }
 
-    public static InputFilter[] getInputFilter(int inputType) {
-        return getFormatter(inputType).getInputFilter();
-    }
-
-    public static int getTextInputType(int inputType) {
-        return getFormatter(inputType).getTextInputType();
-    }
-
     public static String getAllowableCharacters(int inputType) {
         return getFormatter(inputType).getAllowableCharacters();
     }

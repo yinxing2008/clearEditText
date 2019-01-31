@@ -13,16 +13,6 @@ public class NumberFormatter extends BaseInputTextFormatter {
     }
 
     @Override
-    public InputFilter[] getInputFilter() {
-        return null;
-    }
-
-    @Override
-    public int getTextInputType() {
-        return InputType.TYPE_CLASS_NUMBER;
-    }
-
-    @Override
     public String getAllowableCharacters() {
         return ".0123456789 ";
     }

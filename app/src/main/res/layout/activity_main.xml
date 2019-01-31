@@ -58,7 +58,7 @@
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
-        app:showType="password" />
+        android:inputType="textPassword"/>
 
     <com.cxyzy.cet.ClearEditText
         android:layout_width="match_parent"

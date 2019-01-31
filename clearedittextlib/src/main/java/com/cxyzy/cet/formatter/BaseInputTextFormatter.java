@@ -1,7 +1,6 @@
 package com.cxyzy.cet.formatter;
 
 import android.text.Editable;
-import android.text.InputType;
 import android.text.TextWatcher;
 import android.widget.EditText;
 
@@ -80,9 +79,4 @@ public abstract class BaseInputTextFormatter implements InputTextFormatter {
     }
 
     protected abstract boolean isSpace(int length);
-
-    @Override
-    public int getTextInputType() {
-        return InputType.TYPE_CLASS_TEXT;
-    }
 }

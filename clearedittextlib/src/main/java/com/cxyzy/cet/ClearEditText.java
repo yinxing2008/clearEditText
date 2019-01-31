@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
-import android.text.InputFilter;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.method.DigitsKeyListener;
@@ -34,7 +33,7 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
      */
     private boolean hasFocus;
     private int start, count, before;
-    private int clearEditTextInputType;
+    private int showType;
 
     public ClearEditText(Context context) {
         this(context, null);
@@ -51,7 +50,7 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
 
     private void init(final Context context, @Nullable AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ClearEditText);
-        clearEditTextInputType = typedArray.getInt(R.styleable.ClearEditText_showType, TYPE_COMMON);
+        showType = typedArray.getInt(R.styleable.ClearEditText_showType, TYPE_COMMON);
 
         //获取EditText的DrawableRight,假如没有设置我们就使用默认的图片
         mClearDrawable = getCompoundDrawables()[2];
@@ -67,13 +66,7 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
         //设置输入框里面内容发生改变的监听
         addTextChangedListener(this);
 
-        InputFilter[] inputFilters = InputTextFormatterFactory.getInputFilter(clearEditTextInputType);
-        if (inputFilters != null) {
-            setFilters(inputFilters);
-        }
-
-        setInputType(InputTextFormatterFactory.getTextInputType(clearEditTextInputType));
-        String allowableCharacters = InputTextFormatterFactory.getAllowableCharacters(clearEditTextInputType);
+        String allowableCharacters = InputTextFormatterFactory.getAllowableCharacters(showType);
         if (!TextUtils.isEmpty(allowableCharacters)) {
             setKeyListener(DigitsKeyListener.getInstance(allowableCharacters));
         }
@@ -148,7 +141,7 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
 
     @Override
     public void afterTextChanged(Editable s) {
-        InputTextFormatterFactory.format(clearEditTextInputType, this, this, start, before, count);
+        InputTextFormatterFactory.format(showType, this, this, start, before, count);
     }
 
 }

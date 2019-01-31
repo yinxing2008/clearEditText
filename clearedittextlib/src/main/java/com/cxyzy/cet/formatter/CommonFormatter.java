@@ -9,11 +9,6 @@ public class CommonFormatter extends BaseInputTextFormatter {
     }
 
     @Override
-    public InputFilter[] getInputFilter() {
-        return null;
-    }
-
-    @Override
     public String getAllowableCharacters() {
         return null;
     }
