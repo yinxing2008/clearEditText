@@ -1,6 +1,5 @@
 package com.cxyzy.cet.formatter;
 
-import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.widget.EditText;
 
@@ -14,11 +13,7 @@ public class InputTextFormatterFactory {
             return new IdCardFormatter();
         } else if (inputType == Constants.TYPE_BANK_CARD) {
             return new BankCardFormatter();
-        } else if (inputType == Constants.TYPE_PASSWORD) {
-            return new PasswordFormatter();
-        } else if (inputType == Constants.TYPE_NUMBER) {
-            return new NumberFormatter();
-        }else {
+        } else {
             return new CommonFormatter();
         }
     }
@@ -30,4 +25,8 @@ public class InputTextFormatterFactory {
     public static String getAllowableCharacters(int inputType) {
         return getFormatter(inputType).getAllowableCharacters();
     }
+    public static String getTextFormat(int inputType) {
+        return getFormatter(inputType).getTextFormat();
+    }
+
 }

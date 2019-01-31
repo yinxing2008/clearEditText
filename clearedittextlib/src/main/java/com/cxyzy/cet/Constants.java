@@ -8,4 +8,6 @@ public class Constants {
     public static final int TYPE_PASSWORD = 4;
     public static final int TYPE_NUMBER = 5;
 
+    public static final char SPLIT = '.';
+
 }

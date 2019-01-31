@@ -1,7 +1,5 @@
 package com.cxyzy.cet.formatter;
 
-import android.text.InputFilter;
-
 public class CommonFormatter extends BaseInputTextFormatter {
     @Override
     protected boolean isSpace(int length) {
@@ -10,6 +8,11 @@ public class CommonFormatter extends BaseInputTextFormatter {
 
     @Override
     public String getAllowableCharacters() {
+        return null;
+    }
+
+    @Override
+    public String getTextFormat() {
         return null;
     }
 }

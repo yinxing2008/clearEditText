@@ -1,8 +1,13 @@
 package com.cxyzy.cet.formatter;
 
+import android.support.annotation.NonNull;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.widget.EditText;
+
+import com.cxyzy.cet.Constants;
 
 public abstract class BaseInputTextFormatter implements InputTextFormatter {
     protected final int DEFAULT_MAX_LEN = 50;
@@ -78,5 +83,18 @@ public abstract class BaseInputTextFormatter implements InputTextFormatter {
         }
     }
 
-    protected abstract boolean isSpace(int length);
+    protected boolean isSpace(int length) {
+        String format = getTextFormat();
+        boolean result = false;
+        if (!TextUtils.isEmpty(format)
+                && length < format.length() && length > 0
+                && containsSplit(format, length)) {
+            result = true;
+        }
+        return result;
+    }
+
+    private boolean containsSplit(@NonNull String format, int length) {
+        return format.charAt(length - 1) == Constants.SPLIT;
+    }
 }

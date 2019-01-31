@@ -84,6 +84,6 @@
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
-        app:showType="number" />
+        android:inputType="number" />
 
 </LinearLayout>
