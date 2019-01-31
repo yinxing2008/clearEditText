@@ -19,7 +19,7 @@
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
-        app:input_type="phone" />
+        app:showType="phone" />
 
     <com.cxyzy.cet.ClearEditText
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
-        app:input_type="id_card_no" />
+        app:showType="id_card_no" />
 
     <com.cxyzy.cet.ClearEditText
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
-        app:input_type="bank_card_no" />
+        app:showType="bank_card_no" />
 
     <com.cxyzy.cet.ClearEditText
         android:layout_width="match_parent"
@@ -58,7 +58,7 @@
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
-        app:input_type="password" />
+        app:showType="password" />
 
     <com.cxyzy.cet.ClearEditText
         android:layout_width="match_parent"
@@ -71,7 +71,7 @@
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
-        app:input_type="common" />
+        app:showType="common" />
 
     <com.cxyzy.cet.ClearEditText
         android:layout_width="match_parent"
@@ -84,6 +84,6 @@
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
-        app:input_type="number" />
+        app:showType="number" />
 
 </LinearLayout>

@@ -51,7 +51,7 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
 
     private void init(final Context context, @Nullable AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ClearEditText);
-        clearEditTextInputType = typedArray.getInt(R.styleable.ClearEditText_input_type, TYPE_COMMON);
+        clearEditTextInputType = typedArray.getInt(R.styleable.ClearEditText_showType, TYPE_COMMON);
 
         //获取EditText的DrawableRight,假如没有设置我们就使用默认的图片
         mClearDrawable = getCompoundDrawables()[2];
