@@ -9,7 +9,6 @@
             <enum name="IDCardNo" value="3" />
         </attr>
         <attr name="textFormat" format="string"/>
-        <attr name="allowableCharacters" format="string"/>
 
     </declare-styleable>
 

@@ -36,7 +36,6 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
     private boolean hasFocus;
     private int start, count, before;
     private int showType;
-    private String allowableCharacters;
     private String textFormat;
     private InputTextFormatter inputTextFormatter;
 
@@ -56,7 +55,6 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
     private void init(final Context context, @Nullable AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ClearEditText);
         showType = typedArray.getInt(R.styleable.ClearEditText_showType, TYPE_COMMON);
-        allowableCharacters = typedArray.getString(R.styleable.ClearEditText_allowableCharacters);
         textFormat = typedArray.getString(R.styleable.ClearEditText_textFormat);
 
         inputTextFormatter = InputTextFormatterFactory.getFormatter(showType);
@@ -75,29 +73,35 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
         //设置输入框里面内容发生改变的监听
         addTextChangedListener(this);
 
+        setAllowableCharacters();
+        setTextFormat();
+        setInputFilter();
 
+    }
 
-        if (TextUtils.isEmpty(allowableCharacters)) {
-            allowableCharacters = inputTextFormatter.getAllowableCharacters();
-        }
+    private void setAllowableCharacters() {
+        String allowableCharacters = inputTextFormatter.getAllowableCharacters();
         if (!TextUtils.isEmpty(allowableCharacters)) {
             if (!allowableCharacters.contains(" ")) {
                 allowableCharacters = allowableCharacters + " ";
             }
             setKeyListener(DigitsKeyListener.getInstance(allowableCharacters));
         }
+    }
 
+    private void setTextFormat() {
         if (!TextUtils.isEmpty(textFormat)) {
             inputTextFormatter.setTextFormat(textFormat);
         }
+    }
 
+    private void setInputFilter() {
         if (getFilters() == null || getFilters().length == 0) {
             InputFilter[] filters = inputTextFormatter.getInputFilter();
             if (filters != null && filters.length != 0) {
                 setFilters(filters);
             }
         }
-
     }
 
     /**
