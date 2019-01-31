@@ -4,7 +4,7 @@
 # 调用方法：
 1. 添加依赖包
 - 项目根目录下build.gradle的allprojects->repositories下增加`maven { url 'https://jitpack.io' }`
-- app工程目录下build.gradle的dependencies中增加`implementation 'com.github.cxyzy1:clearEditText:1.0.1'`
+- app工程目录下build.gradle的dependencies中增加`implementation 'com.github.cxyzy1:clearEditText:1.0.3'`
 2. xml中使用样例
 ```
 <com.cxyzy.cet.ClearEditText
