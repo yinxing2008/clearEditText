@@ -16,8 +16,8 @@
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
-        android:paddingEnd="12dp"
-        android:paddingRight="12dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
         android:paddingBottom="15dp"
         app:showType="phone" />
 
@@ -29,10 +29,24 @@
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
-        android:paddingEnd="12dp"
-        android:paddingRight="12dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
         android:paddingBottom="15dp"
         app:showType="IDCardNo" />
+
+    <com.cxyzy.cet.ClearEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:hint="请输入身份证号(自定义分段格式)"
+        android:paddingStart="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        app:showType="IDCardNo"
+        app:textFormat="###.###.####.####.####" />
 
     <com.cxyzy.cet.ClearEditText
         android:layout_width="match_parent"
@@ -42,8 +56,8 @@
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
-        android:paddingEnd="12dp"
-        android:paddingRight="12dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
         android:paddingBottom="15dp"
         app:showType="bankCardNo" />
 
@@ -52,38 +66,25 @@
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:hint="请输入密码"
+        android:inputType="textPassword"
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
-        android:paddingEnd="12dp"
-        android:paddingRight="12dp"
-        android:paddingBottom="15dp"
-        app:showType="password" />
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp" />
 
     <com.cxyzy.cet.ClearEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:hint="请输入普通文字"
+        android:inputType="text"
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
-        android:paddingEnd="12dp"
-        android:paddingRight="12dp"
-        android:paddingBottom="15dp"
-        app:showType="common" />
-
-    <com.cxyzy.cet.ClearEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:hint="请输入数字(含小数点)"
-        android:paddingStart="15dp"
-        android:paddingLeft="15dp"
-        android:paddingTop="15dp"
-        android:paddingEnd="12dp"
-        android:paddingRight="12dp"
-        android:paddingBottom="15dp"
-        app:showType="number" />
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp" />
 
 </LinearLayout>
