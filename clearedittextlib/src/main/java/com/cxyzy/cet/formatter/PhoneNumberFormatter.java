@@ -8,7 +8,7 @@ public class PhoneNumberFormatter extends BaseInputTextFormatter {
 
     PhoneNumberFormatter()
     {
-        textFormat ="###.####.####";
+        textFormat ="### #### ####";
     }
 
     @Override

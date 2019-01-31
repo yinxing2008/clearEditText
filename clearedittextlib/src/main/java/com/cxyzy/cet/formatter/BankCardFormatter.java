@@ -6,7 +6,7 @@ package com.cxyzy.cet.formatter;
 
 public class BankCardFormatter extends BaseInputTextFormatter {
     BankCardFormatter() {
-        textFormat = "####.####.####.####.####.####";
+        textFormat = "#### #### #### #### #### ####";
     }
 
     @Override

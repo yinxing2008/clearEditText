@@ -19,7 +19,7 @@ import android.view.View.OnFocusChangeListener;
 import com.cxyzy.cet.formatter.InputTextFormatter;
 import com.cxyzy.cet.formatter.InputTextFormatterFactory;
 
-import static com.cxyzy.cet.Constants.TYPE_COMMON;
+import static com.cxyzy.cet.Constants.TYPE_TEXT;
 
 /**
  * 带清除按钮，支持分段显示的输入框。
@@ -54,7 +54,7 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
 
     private void init(final Context context, @Nullable AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ClearEditText);
-        showType = typedArray.getInt(R.styleable.ClearEditText_showType, TYPE_COMMON);
+        showType = typedArray.getInt(R.styleable.ClearEditText_showType, TYPE_TEXT);
         textFormat = typedArray.getString(R.styleable.ClearEditText_textFormat);
 
         inputTextFormatter = InputTextFormatterFactory.getFormatter(showType);

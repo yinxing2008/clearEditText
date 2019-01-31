@@ -11,24 +11,7 @@ public class InputTextFormatterFactory {
         } else if (showType == Constants.TYPE_BANK_CARD) {
             return new BankCardFormatter();
         } else {
-            return new CommonFormatter();
+            return new TextFormatter();
         }
     }
-
-//    public static void format(int showType, EditText editText, TextWatcher watcher, int start, int before, int count) {
-//        getFormatter(showType).format(editText, watcher, start, before, count);
-//    }
-//
-//    public static InputFilter[] getInputFilter(int showType) {
-//        return getFormatter(showType).getInputFilter();
-//    }
-//
-//    public static String getAllowableCharacters(int showType) {
-//        return getFormatter(showType).getAllowableCharacters();
-//    }
-//
-//    public static void setTextFormat(int showType, String textFormat) {
-//        getFormatter(showType).setTextFormat(textFormat);
-//    }
-
 }

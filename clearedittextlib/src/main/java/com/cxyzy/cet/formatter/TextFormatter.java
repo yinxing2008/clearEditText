@@ -1,7 +1,7 @@
 package com.cxyzy.cet.formatter;
 
-public class CommonFormatter extends BaseInputTextFormatter {
-    public CommonFormatter() {
+public class TextFormatter extends BaseInputTextFormatter {
+    public TextFormatter() {
     }
 
     @Override

@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:hint="请输入手机号"
+        android:hint="手机号"
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:hint="请输入身份证号(默认格式)"
+        android:hint="身份证号(默认格式)"
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:hint="请输入身份证号(自定义分段格式)"
+        android:hint="身份证号(自定义分段格式)"
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
@@ -46,13 +46,13 @@
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
         app:showType="IDCardNo"
-        app:textFormat="###.###.####.####.####" />
+        app:textFormat="### ### #### #### ####" />
 
     <com.cxyzy.cet.ClearEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:hint="请输入银行卡"
+        android:hint="银行卡"
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
@@ -65,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:hint="请输入密码"
+        android:hint="密码"
         android:inputType="textPassword"
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
@@ -78,7 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:hint="请输入普通文字"
+        android:hint="普通文字"
         android:inputType="text"
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
@@ -86,5 +86,20 @@
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp" />
+
+    <com.cxyzy.cet.ClearEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:hint="普通文字(自定义分段格式)"
+        android:inputType="text"
+        android:paddingStart="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        app:textFormat="### ### ##"
+        />
 
 </LinearLayout>

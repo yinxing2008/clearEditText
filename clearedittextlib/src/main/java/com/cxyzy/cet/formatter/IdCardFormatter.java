@@ -6,7 +6,7 @@ package com.cxyzy.cet.formatter;
 public class IdCardFormatter extends BaseInputTextFormatter {
 
     IdCardFormatter() {
-        textFormat = "######.####.####.####";
+        textFormat = "###### #### #### ####";
     }
 
     @Override
