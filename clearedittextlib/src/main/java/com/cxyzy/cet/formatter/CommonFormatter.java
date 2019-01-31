@@ -3,16 +3,11 @@ package com.cxyzy.cet.formatter;
 public class CommonFormatter extends BaseInputTextFormatter {
     private static CommonFormatter INSTANCE = new CommonFormatter();
 
-    private CommonFormatter() {
+    CommonFormatter() {
     }
 
     public static CommonFormatter getInstance() {
         return INSTANCE;
-    }
-
-    @Override
-    protected boolean isSpace(int length) {
-        return false;
     }
 
     @Override

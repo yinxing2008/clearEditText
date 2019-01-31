@@ -19,7 +19,7 @@
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
-        app:textFormat="##.##.##.##" />
+        app:showType="phone" />
 
     <com.cxyzy.cet.ClearEditText
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
-        app:showType="id_card_no" />
+        app:showType="IDCardNo" />
 
     <com.cxyzy.cet.ClearEditText
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
-        app:showType="bank_card_no" />
+        app:showType="bankCardNo" />
 
     <com.cxyzy.cet.ClearEditText
         android:layout_width="match_parent"
@@ -65,25 +65,26 @@
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:hint="请输入普通文字"
-        android:paddingStart="15dp"
-        android:paddingLeft="15dp"
-        android:paddingTop="15dp"
-        android:paddingEnd="15dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="15dp"
-        app:showType="common" />
-
-    <com.cxyzy.cet.ClearEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:hint="请输入数字(含小数点)"
-        android:inputType="number"
+        android:inputType="text"
         android:paddingStart="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:paddingEnd="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp" />
+
+    <com.cxyzy.cet.ClearEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:hint="自定义分段格式"
+        android:inputType="number"
+        android:paddingStart="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        app:textFormat="###.###.###.###"/>
 
 </LinearLayout>

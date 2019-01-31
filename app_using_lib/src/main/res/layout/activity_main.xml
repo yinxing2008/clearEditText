@@ -32,7 +32,7 @@
         android:paddingEnd="12dp"
         android:paddingRight="12dp"
         android:paddingBottom="15dp"
-        app:showType="id_card_no" />
+        app:showType="IDCardNo" />
 
     <com.cxyzy.cet.ClearEditText
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
         android:paddingEnd="12dp"
         android:paddingRight="12dp"
         android:paddingBottom="15dp"
-        app:showType="bank_card_no" />
+        app:showType="bankCardNo" />
 
     <com.cxyzy.cet.ClearEditText
         android:layout_width="match_parent"

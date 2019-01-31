@@ -16,6 +16,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnFocusChangeListener;
 
+import com.cxyzy.cet.formatter.InputTextFormatter;
 import com.cxyzy.cet.formatter.InputTextFormatterFactory;
 
 import static com.cxyzy.cet.Constants.TYPE_COMMON;
@@ -37,6 +38,7 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
     private int showType;
     private String allowableCharacters;
     private String textFormat;
+    private InputTextFormatter inputTextFormatter;
 
     public ClearEditText(Context context) {
         this(context, null);
@@ -71,20 +73,23 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
         //设置输入框里面内容发生改变的监听
         addTextChangedListener(this);
 
-
+        inputTextFormatter = InputTextFormatterFactory.getFormatter(showType);
         if (TextUtils.isEmpty(allowableCharacters)) {
-            allowableCharacters = InputTextFormatterFactory.getAllowableCharacters(showType);
+            allowableCharacters = inputTextFormatter.getAllowableCharacters();
         }
         if (!TextUtils.isEmpty(allowableCharacters)) {
+            if (!allowableCharacters.contains(" ")) {
+                allowableCharacters = allowableCharacters + " ";
+            }
             setKeyListener(DigitsKeyListener.getInstance(allowableCharacters));
         }
 
         if (!TextUtils.isEmpty(textFormat)) {
-            InputTextFormatterFactory.setTextFormat(showType, textFormat);
+            inputTextFormatter.setTextFormat(textFormat);
         }
 
         if (getFilters() == null || getFilters().length == 0) {
-            InputFilter[] filters = InputTextFormatterFactory.getInputFilter(showType);
+            InputFilter[] filters = inputTextFormatter.getInputFilter();
             if (filters != null && filters.length != 0) {
                 setFilters(filters);
             }
@@ -160,7 +165,7 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
 
     @Override
     public void afterTextChanged(Editable s) {
-        InputTextFormatterFactory.format(showType, this, this, start, before, count);
+        inputTextFormatter.format(this, this, start, before, count);
     }
 
 }
