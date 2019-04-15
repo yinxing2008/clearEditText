@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <com.cxyzy.cet.ClearEditText
+        android:id="@+id/phoneCET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"

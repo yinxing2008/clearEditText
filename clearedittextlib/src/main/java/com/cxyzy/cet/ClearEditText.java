@@ -3,9 +3,11 @@ package com.cxyzy.cet;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
+
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.widget.AppCompatEditText;
+
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextUtils;
@@ -173,6 +175,19 @@ public class ClearEditText extends AppCompatEditText implements OnFocusChangeLis
     @Override
     public void afterTextChanged(Editable s) {
         inputTextFormatter.format(this, this, start, before, count);
+    }
+
+    /**
+     * 获取不含空格的文本内容
+     * @return 不含空格的文本内容
+     */
+    public String getTextWithoutBlanks() {
+        String result = null;
+        Editable editable = getText();
+        if (editable != null) {
+            result = editable.toString().replaceAll(" ", "");
+        }
+        return result;
     }
 
 }
