@@ -1,5 +1,6 @@
 # 功能描述
 带清除按钮输入框，支持输入普通文字、数字、密码；支持分段显示身份证、手机号、银行卡。
+本工程是androidx版本，appcompat-v7版本见：https://github.com/cxyzy1/clearEditText_v7
 ![](https://github.com/cxyzy1/clearEditText/raw/master/screenshot/Screenshot.png)
 # 调用方法：
 1. 添加依赖包
